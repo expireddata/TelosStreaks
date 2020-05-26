@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { streakChance } from "./calc";
+import styled from "styled-components"; 
 
-function App() {
+const Input = styled.input`
+  display: inline-block; 
+  margin: 20px;
+`
+
+const StyledForm = styled.div`
+  text-align: center
+`
+
+const App = () => {
+  const [start, setStart] = React.useState(""); 
+  const [end, setEnd] = React.useState("");
+  const [lotd, setlotd] = React.useState(false);
+  
+  let dropChance = ""; 
+
+  if(start !== "" && end !== ""){ 
+    const streakObj = streakChance(+start, +end, lotd);
+    let {p, perKill} = streakObj; 
+     dropChance = <><div>{`Your drop chance is ${p.toFixed(6)}, or 1 in ${(1/p).toFixed(3)} streaks.`}</div><div>{`Your average chance per kill on this streak is 1 in ${perKill.toFixed(3)}`}</div></>;
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input type="number" placeholder="Starting Enrage" value={start} onChange={(e) => setStart(e.target.value)} />
+      <Input type="number" placeholder="Ending Enrage" value={end} onChange={(e) => setEnd(e.target.value)} />
+      <div>Lotd: <input type="checkbox" value={lotd} onChange={(e) => setlotd(e.target.checked)} /></div>
+      <div>{dropChance}</div> 
     </div>
   );
 }
