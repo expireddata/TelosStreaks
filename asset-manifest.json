@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TelosStreaks/static/css/main.5f361e03.chunk.css",
+    "main.js": "/TelosStreaks/static/js/main.cd0ed1af.chunk.js",
+    "main.js.map": "/TelosStreaks/static/js/main.cd0ed1af.chunk.js.map",
+    "runtime-main.js": "/TelosStreaks/static/js/runtime-main.e9e9324b.js",
+    "runtime-main.js.map": "/TelosStreaks/static/js/runtime-main.e9e9324b.js.map",
+    "static/js/2.bf5c627d.chunk.js": "/TelosStreaks/static/js/2.bf5c627d.chunk.js",
+    "static/js/2.bf5c627d.chunk.js.map": "/TelosStreaks/static/js/2.bf5c627d.chunk.js.map",
+    "index.html": "/TelosStreaks/index.html",
+    "precache-manifest.b8c78cbae5678bc1cd3544d10d318fd5.js": "/TelosStreaks/precache-manifest.b8c78cbae5678bc1cd3544d10d318fd5.js",
+    "service-worker.js": "/TelosStreaks/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/TelosStreaks/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.bf5c627d.chunk.js.LICENSE.txt": "/TelosStreaks/static/js/2.bf5c627d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9e9324b.js",
+    "static/js/2.bf5c627d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.cd0ed1af.chunk.js"
+  ]
+}
